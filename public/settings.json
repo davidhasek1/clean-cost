@@ -1,0 +1,11 @@
+{
+  "defaults": {
+    "base_price": 100,
+    "beds_price": 100,
+    "baths_price": 100,
+    "kitchen_price": 100,
+    "living_room_price": 100,
+    "price_for_km": 1,
+    "cleaning_props_percentage": 0.1
+  }
+}
