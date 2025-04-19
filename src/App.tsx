@@ -5,6 +5,7 @@ import {
   Typography,
   Paper,
   Container,
+  Link,
 } from '@mui/material';
 import { useTypedForm } from './useForm';
 import { z } from 'zod';
@@ -68,7 +69,7 @@ function App() {
         /*  Number(formData.living_room_number) *  */ data.defaults
           .living_room_price +
         Number(formData.distance_km) * data.defaults.price_for_km) *
-      (1 + data.defaults.cleaning_props_percentage);
+      (1 + data.defaults.cleaning_props_percentage / 100);
     setFinalPrice(price);
   };
 
@@ -88,7 +89,7 @@ function App() {
               <TextField
                 type='number'
                 {...form.register('base_price')}
-                label='Základní cena'
+                label='Základ'
                 fullWidth
                 variant='outlined'
               />
@@ -169,6 +170,17 @@ function App() {
           )}
         </Stack>
       </Paper>
+
+      <Stack spacing={2} mt={2}>
+        <Typography
+          variant='body1'
+          component={Link}
+          target='_blank'
+          href='https://github.com/davidhasek1/clean-cost/blob/1fb60fe5fee0f858e30dcecb22be4755aeded11a/public/settings.json'
+        >
+          Upravit nastavení ceny úklidu
+        </Typography>
+      </Stack>
     </Container>
   );
 }
