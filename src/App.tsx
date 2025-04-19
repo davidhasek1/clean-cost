@@ -176,7 +176,7 @@ function App() {
           variant='body1'
           component={Link}
           target='_blank'
-          href='https://github.com/davidhasek1/clean-cost/blob/1fb60fe5fee0f858e30dcecb22be4755aeded11a/public/settings.json'
+          href='https://github.com/davidhasek1/clean-cost/blob/master/public/settings.json'
         >
           Upravit nastavení ceny úklidu
         </Typography>
